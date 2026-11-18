@@ -45,8 +45,12 @@ GRID Open Access (*) ────┤──►  Python (ingesta)  ──►  Seaw
 |---|---|---|
 | `tournaments` | `Tournaments` | 1 fila por torneo |
 | `games` | `ScoreboardGames` | 1 fila por partida (Team1 = lado azul) |
-| `draft` | `PicksAndBansS7` | 1 fila por partida, con bans/picks en orden y roles |
-| `players` | `ScoreboardPlayers` | 1 fila por jugador por partida |
+| `draft` | `PicksAndBansS7` | 1 fila por partida, con bans/picks en orden y roles (⚠️ Team1 **no** es el lado azul) |
+| `players` | `ScoreboardPlayers` | 1 fila por jugador por partida (`Side=1` = lado azul) |
+
+> ⚠️ **Lado azul en el draft:** en `PicksAndBansS7`, `Team1`/`Team2` no indican el lado. En el MSI 2026
+> estaban invertidos respecto a `ScoreboardGames` en 32 de 71 partidas. Para saber el lado de cada equipo
+> en el draft, cruza con `games` por `GameId` y asigna el lado por **nombre de equipo**, nunca por la columna.
 
 ---
 
