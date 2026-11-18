@@ -1,0 +1,22 @@
+# Entorno y secretos
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Datos y artefactos locales
+data/raw/*
+!data/raw/.gitkeep
+*.duckdb
+*.duckdb.wal
+
+# Airflow
+logs/*
+!logs/.gitkeep
+config/airflow.cfg
+
+# Sistema
+.DS_Store
+Thumbs.db

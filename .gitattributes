@@ -1,0 +1,2 @@
+# Fuerza finales de línea LF: evita errores de scripts dentro de Docker cuando trabajas desde Windows.
+* text=auto eol=lf
