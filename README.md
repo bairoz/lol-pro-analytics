@@ -1,6 +1,6 @@
 # LoL Pro Analytics 🏆
 
-Pipeline de datos de **esports profesionales de League of Legends** (LCK, LPL, LEC, la liga de América, MSI y Worlds)
+Pipeline de datos de **esports profesionales de League of Legends** (LCK, LPL, LEC, LCS, CBLOL, MSI y Worlds)
 para responder tres preguntas:
 
 1. **Draft:** ¿qué campeones se priorizan, importa el lado azul o el first pick, cómo cambia por parche?
@@ -115,7 +115,7 @@ Para apagar todo: `docker compose down` (añade `-v` para borrar también los da
 
 ### Primer arranque: verifica la configuración
 1. `uv run lolpro list-leagues --year 2026`: compara los nombres con `LOLPRO_LEAGUES` en
-   `src/lolpro/config.py` y ajústalos si alguno no coincide (por ejemplo, el nombre de la liga de América).
+   `src/lolpro/config.py` y ajústalos si alguno no coincide (en 2026 la LTA volvió a separarse en LCS y CBLOL).
 2. Si Leaguepedia responde con un error de campo, revisa los campos de cada tabla en
    <https://lol.fandom.com/wiki/Special:CargoTables> y corrige las listas en
    `src/lolpro/ingestion/leaguepedia.py`.
